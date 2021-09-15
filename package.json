@@ -1,0 +1,25 @@
+{
+    "name": "example",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "webpack && cp public/* build",
+        "start": "ecstatic build --port 3000"
+    },
+    "dependencies": {
+        "@babel/core": "^7.15.5",
+        "@babel/preset-env": "^7.15.6",
+        "@babel/preset-react": "^7.14.5",
+        "babel-loader": "^8.2.2",
+        "react": "^16.7.0",
+        "react-dom": "^16.7.0"
+    },
+    "devDependencies": {
+        "@swc/core": "^1.2.87",
+        "ecstatic": "^3.3.0",
+        "swc-loader": "^0.1.15",
+        "webpack": "^4.28.4",
+        "webpack-cli": "^3.2.1"
+    }
+}
