@@ -1,6 +1,7 @@
 "use strict";
 
 const path = require("path");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   mode: "development",
@@ -11,6 +12,25 @@ module.exports = {
     path: path.join(__dirname, "build"),
     filename: "bundle.js",
   },
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    client: {
+      overlay: {
+        warnings: false,
+        errors: true,
+      },
+    },
+    watchFiles: [".env"],
+  },
+  watchOptions: {
+    ignored: ["**/node_modules", "**/dist", "**/tools"],
+  },
+  plugins: [
+    new Dotenv({
+      path: path.resolve(__dirname, `.env`),
+    }),
+  ],
   module: {
     rules: [
       {
