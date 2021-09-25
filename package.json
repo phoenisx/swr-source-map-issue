@@ -4,7 +4,7 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "dev": "cross-env NODE_ENV=development webpack serve --config ./webpack.config.js",
+        "dev": "cross-env NODE_ENV=development webpack serve --config ./webpack.config.mjs",
         "build": "webpack && cp public/* build",
         "start": "ecstatic build --port 3000"
     },
@@ -19,7 +19,7 @@
     "devDependencies": {
         "@swc/core": "^1.2.87",
         "cross-env": "^7.0.3",
-        "dotenv-webpack": "^7.0.3",
+        "dotenv": "^10.0.0",
         "ecstatic": "^3.3.0",
         "swc-loader": "^0.1.15",
         "webpack": "^5.53.0",
